@@ -47,7 +47,7 @@ class User(UserMixin, db.Model):
 
     def generate_confirmation_token(self):
         s = Serializer(current_app.config['SECRET_KEY'], expires_in=3600)
-        token = s.dumps({'confirm': self.id})
+        token = s.dumps({'confirm': self.email})
         return token
 
     def confirm(self, token):
@@ -58,7 +58,7 @@ class User(UserMixin, db.Model):
         except:
             print('1')
             return False
-        if data.get('confirm') != self.id:
+        if data.get('confirm') != self.email:
             print(data.get('confirm'))
             print(self.id)
             return False
