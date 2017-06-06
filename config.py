@@ -8,6 +8,7 @@ class Config:
     SECRET_KEY = 'you-will-never-guess'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'python.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
     @staticmethod
     def init_app(app):
@@ -16,7 +17,12 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_SERVER = 'smtp.qq.com'
+    MAIL_PORT = 465
+    MAIL_USE_SSL = True
+    MAIL_USERNAME = '*******@qq.com'
+    MAIL_PASSWORD = '**********'
+    MAIL_DEFAULT_SENDER = '****@qq.com'
 
 
 config = {
