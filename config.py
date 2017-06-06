@@ -21,8 +21,9 @@ class DevelopmentConfig(Config):
     MAIL_PORT = 465
     MAIL_USE_SSL = True
     MAIL_USERNAME = '*******@qq.com'
-    MAIL_PASSWORD = '**********'
-    MAIL_DEFAULT_SENDER = '****@qq.com'
+    MAIL_PASSWORD = '*********'
+    MAIL_DEFAULT_SENDER = '********@qq.com'
+    FLASK_ADMIN = 'wubo@paicaifu.com'
 
 
 config = {
