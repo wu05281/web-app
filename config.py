@@ -9,6 +9,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'python.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    FLASKY_POSTS_PER_PAGE = 20
 
     @staticmethod
     def init_app(app):
@@ -20,10 +21,10 @@ class DevelopmentConfig(Config):
     MAIL_SERVER = 'smtp.qq.com'
     MAIL_PORT = 465
     MAIL_USE_SSL = True
-    MAIL_USERNAME = '*******@qq.com'
-    MAIL_PASSWORD = '*********'
-    MAIL_DEFAULT_SENDER = '********@qq.com'
-    FLASK_ADMIN = 'wubo@paicaifu.com'
+    MAIL_USERNAME = '@qq.com'
+    MAIL_PASSWORD = ''
+    MAIL_DEFAULT_SENDER = '@qq.com'
+    FLASK_ADMIN = '@.com'
 
 
 config = {
