@@ -10,6 +10,9 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     FLASKY_POSTS_PER_PAGE = 20
+    FLASKY_FOLLOWERS_PER_PAGE = 50
+    FLASKY_COMMENTS_PER_PAGE = 30
+    FLASKY_SLOW_DB_QUERY_TIME = 0.5
 
     @staticmethod
     def init_app(app):
@@ -25,6 +28,7 @@ class DevelopmentConfig(Config):
     MAIL_PASSWORD = ''
     MAIL_DEFAULT_SENDER = '@qq.com'
     FLASK_ADMIN = '@.com'
+
 
 
 config = {
